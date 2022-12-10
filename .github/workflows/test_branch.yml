@@ -21,8 +21,8 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      -name: Create DB
+      - name: Create DB
         run: DATABASE_URL=sqlite:///test.db python create_db.py
 
-      -name: Run tests
+      - name: Run tests
         run: DATABASE_URL=sqlite:///test.db pytest
